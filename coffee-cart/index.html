@@ -4,7 +4,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Grounds & Glory — Coffee Carts for Hire</title>
+<title>Grounds &amp; Glory &mdash; Coffee Carts for Hire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -19,17 +21,16 @@
   }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
-font-family: ‘Lato’, sans-serif;
+font-family: ‘Lato’, ‘Georgia’, sans-serif;
 background: var(–cream);
 color: var(–espresso);
 overflow-x: hidden;
 }
 
-/* ─── HERO ─── */
+/* ── HERO ── */
 .hero {
 min-height: 100vh;
 background: var(–dark-roast);
@@ -41,8 +42,6 @@ position: relative;
 overflow: hidden;
 padding: 2rem;
 }
-
-/* grain overlay */
 .hero::before {
 content: ‘’;
 position: absolute;
@@ -51,8 +50,6 @@ background-image: url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 200 200’ xml
 opacity: 0.35;
 pointer-events: none;
 }
-
-/* decorative rings */
 .hero::after {
 content: ‘’;
 position: absolute;
@@ -64,17 +61,14 @@ transform: translate(-50%, -50%);
 box-shadow: 0 0 0 60px rgba(200,149,90,0.05), 0 0 0 120px rgba(200,149,90,0.03);
 pointer-events: none;
 }
-
 .hero-inner {
 position: relative;
 z-index: 1;
 text-align: center;
 animation: fadeUp 1s ease both;
 }
-
 .badge {
 display: inline-block;
-font-family: ‘Lato’, sans-serif;
 font-weight: 700;
 font-size: 0.65rem;
 letter-spacing: 0.25em;
@@ -85,20 +79,17 @@ padding: 0.4rem 1.2rem;
 border-radius: 2rem;
 margin-bottom: 1.8rem;
 }
-
 .hero h1 {
-font-family: ‘Playfair Display’, serif;
+font-family: ‘Playfair Display’, Georgia, serif;
 font-size: clamp(3rem, 8vw, 6.5rem);
 line-height: 1.05;
 color: var(–oat);
 margin-bottom: 0.5rem;
 }
-
 .hero h1 em {
 font-style: italic;
 color: var(–crema);
 }
-
 .hero-sub {
 font-size: 1.05rem;
 color: var(–latte);
@@ -107,7 +98,25 @@ letter-spacing: 0.04em;
 margin-top: 1.2rem;
 margin-bottom: 2.5rem;
 }
+.hero-btns {
+display: flex;
+flex-wrap: wrap;
+gap: 0.8rem;
+justify-content: center;
+}
+.scroll-hint {
+position: absolute;
+bottom: 2rem;
+left: 50%;
+transform: translateX(-50%);
+color: rgba(232,201,154,0.5);
+font-size: 0.7rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+animation: bounce 2s infinite;
+}
 
+/* ── BUTTONS ── */
 .btn {
 display: inline-block;
 background: var(–crema);
@@ -129,23 +138,10 @@ transition: background 0.25s, transform 0.2s;
 background: transparent;
 color: var(–crema);
 border: 1.5px solid var(–crema);
-margin-left: 1rem;
 }
-.btn-outline:hover { background: rgba(200,149,90,0.1); }
+.btn-outline:hover { background: rgba(200,149,90,0.1); transform: translateY(-2px); }
 
-.scroll-hint {
-position: absolute;
-bottom: 2rem;
-left: 50%;
-transform: translateX(-50%);
-color: rgba(232,201,154,0.5);
-font-size: 0.7rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-animation: bounce 2s infinite;
-}
-
-/* ─── SECTION COMMON ─── */
+/* ── COMMON ── */
 section { padding: 6rem 2rem; }
 .container { max-width: 1100px; margin: 0 auto; }
 .section-label {
@@ -157,7 +153,7 @@ color: var(–crema);
 margin-bottom: 0.8rem;
 }
 .section-title {
-font-family: ‘Playfair Display’, serif;
+font-family: ‘Playfair Display’, Georgia, serif;
 font-size: clamp(2rem, 4vw, 3rem);
 line-height: 1.15;
 color: var(–espresso);
@@ -171,7 +167,7 @@ font-weight: 300;
 max-width: 560px;
 }
 
-/* ─── ABOUT STRIP ─── */
+/* ── ABOUT ── */
 .about {
 background: var(–oat);
 border-top: 1px solid rgba(92,51,32,0.1);
@@ -193,7 +189,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.about-visual .coffee-icon {
+.coffee-icon {
 font-size: 7rem;
 filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
 animation: steam 3s ease-in-out infinite;
@@ -209,12 +205,13 @@ padding: 0.5rem 1rem;
 border-radius: 2rem;
 letter-spacing: 0.05em;
 }
+.about-text .section-body + .section-body { margin-top: 1rem; }
 
-/* ─── CARTS / OFFERINGS ─── */
+/* ── CARTS ── */
 .carts { background: var(–cream); }
 .carts-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 gap: 1.5rem;
 margin-top: 3rem;
 }
@@ -233,22 +230,16 @@ position: absolute;
 top: 0; left: 0; right: 0;
 height: 4px;
 background: linear-gradient(90deg, var(–crema), var(–medium));
-border-radius: 4px 4px 0 0;
 }
 .cart-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(26,13,0,0.1); }
 .cart-card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
 .cart-card h3 {
-font-family: ‘Playfair Display’, serif;
+font-family: ‘Playfair Display’, Georgia, serif;
 font-size: 1.35rem;
 color: var(–espresso);
 margin-bottom: 0.5rem;
 }
-.cart-card p {
-font-size: 0.9rem;
-line-height: 1.7;
-color: var(–medium);
-font-weight: 300;
-}
+.cart-card p { font-size: 0.9rem; line-height: 1.7; color: var(–medium); font-weight: 300; }
 .cart-tag {
 display: inline-block;
 margin-top: 1rem;
@@ -262,8 +253,8 @@ padding: 0.3rem 0.8rem;
 border-radius: 2rem;
 }
 
-/* ─── EVENTS ─── */
-.events { background: var(–espresso); color: var(–oat); }
+/* ── EVENTS ── */
+.events { background: var(–espresso); }
 .events .section-title { color: var(–latte); }
 .events .section-body { color: rgba(232,201,154,0.7); }
 .events-pills {
@@ -282,9 +273,9 @@ font-size: 0.85rem;
 letter-spacing: 0.05em;
 transition: background 0.2s;
 }
-.pill:hover { background: rgba(200,149,90,0.2); }
+.pill:hover { background: rgba(200,149,90,0.22); }
 
-/* ─── INQUIRY FORM ─── */
+/* ── INQUIRY ── */
 .inquiry { background: var(–oat); }
 .inquiry-wrap {
 display: grid;
@@ -301,9 +292,6 @@ gap: 0.8rem;
 font-size: 0.9rem;
 color: var(–medium);
 margin-bottom: 0.9rem;
-}
-.contact-list li span:first-child {
-font-size: 1.2rem;
 }
 
 form {
@@ -334,14 +322,22 @@ font-family: ‘Lato’, sans-serif;
 font-size: 0.95rem;
 outline: none;
 transition: border-color 0.2s;
+-webkit-appearance: none;
+appearance: none;
 }
-input:focus, select:focus, textarea:focus {
-border-color: var(–crema);
-}
+input:focus, select:focus, textarea:focus { border-color: var(–crema); }
 textarea { resize: vertical; min-height: 110px; }
-.form-submit { margin-top: 0.5rem; width: 100%; text-align: center; }
+.form-submit { margin-top: 0.5rem; }
+.form-submit .btn { width: 100%; font-size: 0.85rem; padding: 1rem; }
+#form-thanks {
+display: none;
+margin-top: 1rem;
+text-align: center;
+color: var(–medium);
+font-weight: 700;
+}
 
-/* ─── FOOTER ─── */
+/* ── FOOTER ── */
 footer {
 background: var(–dark-roast);
 color: rgba(232,201,154,0.5);
@@ -352,7 +348,7 @@ letter-spacing: 0.08em;
 }
 footer strong { color: var(–crema); }
 
-/* ─── ANIMATIONS ─── */
+/* ── ANIMATIONS ── */
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(30px); }
 to   { opacity: 1; transform: translateY(0); }
@@ -366,129 +362,121 @@ to   { opacity: 1; transform: translateY(0); }
 50%       { transform: translateY(-8px) rotate(2deg); }
 }
 
-/* ─── RESPONSIVE ─── */
+/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
 .about .container { grid-template-columns: 1fr; }
 .about-visual { height: 260px; }
 .inquiry-wrap { grid-template-columns: 1fr; gap: 2rem; }
 .form-row { grid-template-columns: 1fr; }
-.btn-outline { margin-left: 0; margin-top: 0.8rem; }
 }
 </style>
 
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="badge">☕ Mobile Coffee Carts for Hire</span>
-    <h1>Grounds<br/>&amp; <em>Glory</em></h1>
+    <span class="badge">&#9749; Mobile Coffee Carts for Hire</span>
+    <h1>Grounds<br />&amp; <em>Glory</em></h1>
     <p class="hero-sub">Artisan espresso, wherever the moment calls.</p>
-    <a href="#inquiry" class="btn">Request a Quote</a>
-    <a href="#carts" class="btn btn-outline">Our Carts</a>
+    <div class="hero-btns">
+      <a href="#inquiry" class="btn">Request a Quote</a>
+      <a href="#carts" class="btn btn-outline">Our Carts</a>
+    </div>
   </div>
-  <div class="scroll-hint">↓ scroll</div>
+  <div class="scroll-hint">&#8595; scroll</div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 
 <section class="about">
   <div class="container">
     <div class="about-visual">
-      <div class="coffee-icon">☕</div>
-      <span class="about-visual-tag">Est. 2017 · 500+ Events Served</span>
+      <div class="coffee-icon">&#9749;</div>
+      <span class="about-visual-tag">Est. 2017 &middot; 500+ Events Served</span>
     </div>
     <div class="about-text">
       <p class="section-label">Who We Are</p>
-      <h2 class="section-title">Crafted coffee.<br/>Every cup, every crowd.</h2>
-      <p class="section-body">We bring the café to you — stylish, fully self-contained coffee carts staffed by passionate baristas. From intimate weddings to buzzing festivals, we turn every event into an experience worth savouring.</p>
-      <br/>
+      <h2 class="section-title">Crafted coffee.<br />Every cup, every crowd.</h2>
+      <p class="section-body">We bring the caf&eacute; to you &mdash; stylish, fully self-contained coffee carts staffed by passionate baristas. From intimate weddings to buzzing festivals, we turn every event into an experience worth savouring.</p>
       <p class="section-body">All our beans are ethically sourced and freshly roasted. We use professional La Marzocco machines and offer dairy-free alternatives as standard.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ CARTS ═══ -->
+<!-- CARTS -->
 
 <section class="carts" id="carts">
   <div class="container">
     <p class="section-label">What We Offer</p>
     <h2 class="section-title">Choose your cart</h2>
     <div class="carts-grid">
-
-```
-  <div class="cart-card">
-    <div class="cart-card-icon">🛻</div>
-    <h3>The Classic Cart</h3>
-    <p>Our signature timber-and-brass cart. Perfect for up to 150 guests. Serves espresso, lattes, flat whites, and more.</p>
-    <span class="cart-tag">Up to 150 guests</span>
-  </div>
-
-  <div class="cart-card">
-    <div class="cart-card-icon">🚐</div>
-    <h3>The Vintage Van</h3>
-    <p>A restored 1972 split-screen camper with a full two-group setup. An absolute showstopper at weddings and large outdoor events.</p>
-    <span class="cart-tag">150–400 guests</span>
-  </div>
-
-  <div class="cart-card">
-    <div class="cart-card-icon">🧁</div>
-    <h3>The Espresso Bar</h3>
-    <p>Sleek, modern bar setup for corporate events and conference spaces. Discreet, efficient, and endlessly photogenic.</p>
-    <span class="cart-tag">Corporate & Indoors</span>
-  </div>
-
-  <div class="cart-card">
-    <div class="cart-card-icon">🧋</div>
-    <h3>Cold Brew Station</h3>
-    <p>For summer events — cold brew on tap, iced lattes, frappes, and flavoured milk. A crowd favourite when the sun's out.</p>
-    <span class="cart-tag">Seasonal · Outdoors</span>
-  </div>
-
-</div>
-```
-
-  </div>
-</section>
-
-<!-- ═══ EVENTS ═══ -->
-
-<section class="events">
-  <div class="container">
-    <p class="section-label">Perfect For</p>
-    <h2 class="section-title">Every occasion,<br/>a perfect brew.</h2>
-    <p class="section-body">We cater to all kinds of events — wherever people gather, great coffee belongs.</p>
-    <div class="events-pills">
-      <span class="pill">💍 Weddings</span>
-      <span class="pill">🎪 Festivals</span>
-      <span class="pill">🏢 Corporate Events</span>
-      <span class="pill">🎉 Birthday Parties</span>
-      <span class="pill">🎓 Graduations</span>
-      <span class="pill">🛍️ Pop-Up Markets</span>
-      <span class="pill">🎬 Film Sets</span>
-      <span class="pill">🏃 Sporting Events</span>
-      <span class="pill">🎨 Art Exhibitions</span>
-      <span class="pill">🍾 Private Functions</span>
+      <div class="cart-card">
+        <div class="cart-card-icon">&#128731;</div>
+        <h3>The Classic Cart</h3>
+        <p>Our signature timber-and-brass cart. Perfect for up to 150 guests. Serves espresso, lattes, flat whites, and more.</p>
+        <span class="cart-tag">Up to 150 guests</span>
+      </div>
+      <div class="cart-card">
+        <div class="cart-card-icon">&#128656;</div>
+        <h3>The Vintage Van</h3>
+        <p>A restored 1972 split-screen camper with a full two-group setup. An absolute showstopper at weddings and large outdoor events.</p>
+        <span class="cart-tag">150&ndash;400 guests</span>
+      </div>
+      <div class="cart-card">
+        <div class="cart-card-icon">&#9749;</div>
+        <h3>The Espresso Bar</h3>
+        <p>Sleek, modern bar setup for corporate events and conference spaces. Discreet, efficient, and endlessly photogenic.</p>
+        <span class="cart-tag">Corporate &amp; Indoors</span>
+      </div>
+      <div class="cart-card">
+        <div class="cart-card-icon">&#127963;</div>
+        <h3>Cold Brew Station</h3>
+        <p>For summer events &mdash; cold brew on tap, iced lattes, frappes, and flavoured milk. A crowd favourite when the sun&rsquo;s out.</p>
+        <span class="cart-tag">Seasonal &middot; Outdoors</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ INQUIRY ═══ -->
+<!-- EVENTS -->
+
+<section class="events">
+  <div class="container">
+    <p class="section-label">Perfect For</p>
+    <h2 class="section-title">Every occasion,<br />a perfect brew.</h2>
+    <p class="section-body">We cater to all kinds of events &mdash; wherever people gather, great coffee belongs.</p>
+    <div class="events-pills">
+      <span class="pill">Weddings</span>
+      <span class="pill">Festivals</span>
+      <span class="pill">Corporate Events</span>
+      <span class="pill">Birthday Parties</span>
+      <span class="pill">Graduations</span>
+      <span class="pill">Pop-Up Markets</span>
+      <span class="pill">Film Sets</span>
+      <span class="pill">Sporting Events</span>
+      <span class="pill">Art Exhibitions</span>
+      <span class="pill">Private Functions</span>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY -->
 
 <section class="inquiry" id="inquiry">
   <div class="container">
     <div class="inquiry-wrap">
       <div class="inquiry-info">
         <p class="section-label">Get in Touch</p>
-        <h2 class="section-title">Let's brew something special together.</h2>
-        <p class="section-body">Tell us about your event and we'll get back to you within 24 hours with a tailored package and quote.</p>
+        <h2 class="section-title">Let&rsquo;s brew something special together.</h2>
+        <p class="section-body">Tell us about your event and we&rsquo;ll get back to you within 24 hours with a tailored package and quote.</p>
         <ul class="contact-list">
-          <li><span>📍</span><span>Melbourne, VIC — Available Nationwide</span></li>
-          <li><span>📞</span><span>+61 400 000 000</span></li>
-          <li><span>📧</span><span>hello@groundsandglory.com.au</span></li>
-          <li><span>🕐</span><span>Mon–Fri, 8am – 6pm AEST</span></li>
+          <li><span>&#128205;</span><span>Melbourne, VIC &mdash; Available Nationwide</span></li>
+          <li><span>&#128222;</span><span>+61 400 000 000</span></li>
+          <li><span>&#128231;</span><span>hello [at] groundsandglory.com.au</span></li>
+          <li><span>&#128336;</span><span>Mon&ndash;Fri, 8am &ndash; 6pm AEST</span></li>
         </ul>
       </div>
 
@@ -522,9 +510,9 @@ to   { opacity: 1; transform: translateY(0); }
         <select id="guests">
           <option value="">Select range</option>
           <option>Under 50</option>
-          <option>50 – 150</option>
-          <option>150 – 300</option>
-          <option>300 – 500</option>
+          <option>50 - 150</option>
+          <option>150 - 300</option>
+          <option>300 - 500</option>
           <option>500+</option>
         </select>
       </div>
@@ -544,11 +532,9 @@ to   { opacity: 1; transform: translateY(0); }
       <textarea id="message" placeholder="Venue, theme, any special requests..."></textarea>
     </div>
     <div class="form-submit">
-      <button type="submit" class="btn" style="width:100%;font-size:0.85rem;padding:1rem;">Send My Inquiry ✉️</button>
+      <button type="submit" class="btn">Send My Inquiry</button>
     </div>
-    <p id="form-thanks" style="display:none; margin-top:1rem; text-align:center; color:#5c3320; font-weight:700;">
-      ☕ Thanks! We'll be in touch within 24 hours.
-    </p>
+    <p id="form-thanks">&#9749; Thanks! We&rsquo;ll be in touch within 24 hours.</p>
   </form>
 </div>
 ```
@@ -556,38 +542,48 @@ to   { opacity: 1; transform: translateY(0); }
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 
 <footer>
-  <p>© 2025 <strong>Grounds & Glory</strong> · Artisan Coffee Carts for Hire · Melbourne, Australia</p>
+  <p>&copy; 2025 <strong>Grounds &amp; Glory</strong> &middot; Artisan Coffee Carts for Hire &middot; Melbourne, Australia</p>
 </footer>
 
 <script>
   function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('form-thanks').style.display = 'block';
+    var thanks = document.getElementById('form-thanks');
+    thanks.style.display = 'block';
     e.target.reset();
-    setTimeout(() => {
-      document.getElementById('form-thanks').style.display = 'none';
+    setTimeout(function() {
+      thanks.style.display = 'none';
     }, 6000);
   }
 
-  // Simple scroll-in animation for cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.cart-card').forEach((el, i) => {
-    el.style.opacity = 0;
+  // Scroll-in animation for cards
+  var cards = document.querySelectorAll('.cart-card');
+  cards.forEach(function(el, i) {
+    el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
-    el.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
-    observer.observe(el);
+    el.style.transition = 'opacity 0.5s ease ' + (i * 0.1) + 's, transform 0.5s ease ' + (i * 0.1) + 's';
   });
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function(el) { observer.observe(el); });
+  } else {
+    // Fallback for older browsers
+    cards.forEach(function(el) {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  }
 </script>
 
 </body>
