@@ -16,21 +16,21 @@ html { scroll-behavior: smooth; }
 
 /* ─── TOKENS ─── */
 :root {
-  --espresso:   #1a0d00;
-  --dark-roast: #2c1810;
-  --medium:     #5c3320;
-  --crema:      #c8955a;
-  --latte:      #e8c99a;
-  --oat:        #f5ede0;
-  --cream:      #fdf7f0;
+  --espresso:   #1A2A1A;
+  --dark-roast: #2C3E2C;
+  --medium:     #6B8F6B;
+  --crema:      #C4956A;
+  --latte:      #B8D4B8;
+  --oat:        #E7FDE7;
+  --cream:      #F4F0EB;
   --white:      #ffffff;
 }
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  background-color: #fdf7f0;
+  background-color: #F4F0EB;
   background-color: var(--cream);
-  color: #1a0d00;
+  color: #1A2A1A;
   color: var(--espresso);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +41,7 @@ body {
 ════════════════════════════════════ */
 .hero {
   min-height: 100vh;
-  background-color: #2c1810;
+  background-color: #2C3E2C;
   background-color: var(--dark-roast);
   display: flex;
   flex-direction: column;
@@ -66,10 +66,10 @@ body {
   position: absolute;
   width: 600px; height: 600px;
   border-radius: 50%;
-  border: 1px solid rgba(200,149,90,0.15);
+  border: 1px solid rgba(196,149,106,0.2);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 60px rgba(200,149,90,0.04), 0 0 0 120px rgba(200,149,90,0.025);
+  box-shadow: 0 0 0 60px rgba(196,149,106,0.06), 0 0 0 120px rgba(196,149,106,0.03);
   pointer-events: none;
 }
 
@@ -85,9 +85,8 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #c8955a;
-  color: var(--crema);
-  border: 1px solid rgba(200,149,90,0.4);
+  color: #C4956A;
+  border: 1px solid rgba(196,149,106,0.4);
   padding: 0.4rem 1.2rem;
   border-radius: 2rem;
   margin-bottom: 1.8rem;
@@ -97,20 +96,20 @@ body {
   font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1.05;
-  color: #f5ede0;
+  color: #E7FDE7;
   color: var(--oat);
   margin-bottom: 0.5rem;
 }
 
 .hero h1 em {
   font-style: italic;
-  color: #c8955a;
+  color: #C4956A;
   color: var(--crema);
 }
 
 .hero-sub {
   font-size: 1.05rem;
-  color: #e8c99a;
+  color: #B8D4B8;
   color: var(--latte);
   font-weight: 300;
   letter-spacing: 0.04em;
@@ -130,7 +129,7 @@ body {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(232,201,154,0.45);
+  color: rgba(184,212,184,0.5);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -142,9 +141,9 @@ body {
 ════════════════════════════════════ */
 .btn {
   display: inline-block;
-  background-color: #c8955a;
+  background-color: #C4956A;
   background-color: var(--crema);
-  color: #1a0d00;
+  color: #1A2A1A;
   color: var(--espresso);
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -158,16 +157,14 @@ body {
   cursor: pointer;
   transition: background-color 0.25s, transform 0.2s;
 }
-.btn:hover { background-color: #e8c99a; transform: translateY(-2px); }
+.btn:hover { background-color: #B8D4B8; transform: translateY(-2px); }
 
 .btn-outline {
   background-color: transparent;
-  color: #c8955a;
-  color: var(--crema);
-  border-color: #c8955a;
-  border-color: var(--crema);
+  color: #C4956A;
+  border-color: #C4956A;
 }
-.btn-outline:hover { background-color: rgba(200,149,90,0.12); }
+.btn-outline:hover { background-color: rgba(196,149,106,0.15); }
 
 /* ════════════════════════════════════
    SHARED
@@ -181,8 +178,7 @@ section { padding: 6rem 2rem; }
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #c8955a;
-  color: var(--crema);
+  color: #C4956A;
   margin-bottom: 0.8rem;
 }
 
@@ -190,7 +186,7 @@ section { padding: 6rem 2rem; }
   font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.15;
-  color: #1a0d00;
+  color: #1A2A1A;
   color: var(--espresso);
   margin-bottom: 1.5rem;
 }
@@ -198,7 +194,7 @@ section { padding: 6rem 2rem; }
 .section-body {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #5c3320;
+  color: #6B8F6B;
   color: var(--medium);
   font-weight: 300;
   max-width: 560px;
@@ -208,10 +204,10 @@ section { padding: 6rem 2rem; }
    ABOUT
 ════════════════════════════════════ */
 .about {
-  background-color: #f5ede0;
+  background-color: #E7FDE7;
   background-color: var(--oat);
-  border-top: 1px solid rgba(92,51,32,0.1);
-  border-bottom: 1px solid rgba(92,51,32,0.1);
+  border-top: 1px solid rgba(26,42,26,0.12);
+  border-bottom: 1px solid rgba(26,42,26,0.12);
 }
 
 .about .container {
@@ -226,8 +222,8 @@ section { padding: 6rem 2rem; }
   position: relative;
   height: 380px;
   border-radius: 1rem;
-  background-color: #2c1810;
-  background-color: var(--dark-roast);
+  background-color: #2C3E2C;
+  background-color: var(--dark-roast); background-image: linear-gradient(135deg, #C4956A 0%, #C4956A 100%);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -242,10 +238,8 @@ section { padding: 6rem 2rem; }
 .about-visual-tag {
   position: absolute;
   bottom: 1.5rem; left: 1.5rem;
-  background-color: #c8955a;
-  background-color: var(--crema);
-  color: #1a0d00;
-  color: var(--espresso);
+  background-color: #C4956A;
+  color: #1A2A1A;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
@@ -263,7 +257,7 @@ section { padding: 6rem 2rem; }
    CARTS
 ════════════════════════════════════ */
 .carts {
-  background-color: #fdf7f0;
+  background-color: #F4F0EB;
   background-color: var(--cream);
 }
 
@@ -280,7 +274,7 @@ section { padding: 6rem 2rem; }
   background-color: var(--white);
   border-radius: 1.2rem;
   padding: 2rem;
-  border: 1px solid rgba(92,51,32,0.08);
+  border: 1px solid rgba(44,62,44,0.08);
   transition: transform 0.25s, box-shadow 0.25s;
   position: relative;
   overflow: hidden;
@@ -291,12 +285,12 @@ section { padding: 6rem 2rem; }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #c8955a, #5c3320);
+  background: linear-gradient(90deg, #C4956A, #C4956A);
 }
 
 .cart-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(26,13,0,0.1);
+  box-shadow: 0 16px 40px rgba(26,42,26,0.1);
 }
 
 .cart-card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
@@ -304,7 +298,7 @@ section { padding: 6rem 2rem; }
 .cart-card h3 {
   font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
   font-size: 1.35rem;
-  color: #1a0d00;
+  color: #1A2A1A;
   color: var(--espresso);
   margin-bottom: 0.5rem;
 }
@@ -312,7 +306,7 @@ section { padding: 6rem 2rem; }
 .cart-card p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #5c3320;
+  color: #6B8F6B;
   color: var(--medium);
   font-weight: 300;
 }
@@ -324,9 +318,9 @@ section { padding: 6rem 2rem; }
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #c8955a;
+  color: #C4956A;
   color: var(--crema);
-  border: 1px solid #c8955a;
+  border: 1px solid #C4956A;
   border: 1px solid var(--crema);
   padding: 0.3rem 0.8rem;
   border-radius: 2rem;
@@ -336,13 +330,13 @@ section { padding: 6rem 2rem; }
    EVENTS
 ════════════════════════════════════ */
 .events {
-  background-color: #1a0d00;
+  background-color: #1A2A1A;
   background-color: var(--espresso);
 }
 
-.events .section-label { color: #c8955a; }
-.events .section-title { color: #e8c99a; color: var(--latte); }
-.events .section-body  { color: rgba(232,201,154,0.7); }
+.events .section-label { color: #C4956A; }
+.events .section-title { color: #B8D4B8; color: var(--latte); }
+.events .section-body  { color: rgba(184,212,184,0.7); }
 
 .events-pills {
   display: flex;
@@ -352,23 +346,22 @@ section { padding: 6rem 2rem; }
 }
 
 .pill {
-  background-color: rgba(200,149,90,0.12);
-  color: #c8955a;
-  color: var(--crema);
-  border: 1px solid rgba(200,149,90,0.3);
+  background-color: rgba(196,149,106,0.15);
+  color: #C4956A;
+  border: 1px solid rgba(196,149,106,0.35);
   padding: 0.6rem 1.4rem;
   border-radius: 2rem;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   transition: background-color 0.2s;
 }
-.pill:hover { background-color: rgba(200,149,90,0.22); }
+.pill:hover { background-color: rgba(196,149,106,0.25); }
 
 /* ════════════════════════════════════
    INQUIRY
 ════════════════════════════════════ */
 .inquiry {
-  background-color: #f5ede0;
+  background-color: #E7FDE7;
   background-color: var(--oat);
 }
 
@@ -389,7 +382,7 @@ section { padding: 6rem 2rem; }
   align-items: center;
   gap: 0.8rem;
   font-size: 0.9rem;
-  color: #5c3320;
+  color: #6B8F6B;
   color: var(--medium);
   margin-bottom: 0.9rem;
 }
@@ -401,7 +394,7 @@ form {
   background-color: var(--white);
   border-radius: 1.2rem;
   padding: 2.5rem;
-  box-shadow: 0 8px 40px rgba(26,13,0,0.07);
+  box-shadow: 0 8px 40px rgba(26,42,26,0.07);
 }
 
 .form-row { display: flex; gap: 1rem; }
@@ -414,7 +407,7 @@ label {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5c3320;
+  color: #6B8F6B;
   color: var(--medium);
   margin-bottom: 0.4rem;
 }
@@ -422,11 +415,11 @@ label {
 input, select, textarea {
   width: 100%;
   padding: 0.85rem 1rem;
-  border: 1.5px solid rgba(92,51,32,0.18);
+  border: 1.5px solid rgba(44,62,44,0.18);
   border-radius: 0.6rem;
-  background-color: #fdf7f0;
+  background-color: #F4F0EB;
   background-color: var(--cream);
-  color: #1a0d00;
+  color: #1A2A1A;
   color: var(--espresso);
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 0.95rem;
@@ -437,7 +430,7 @@ input, select, textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #c8955a;
+  border-color: #C4956A;
   border-color: var(--crema);
 }
 
@@ -450,7 +443,7 @@ textarea { resize: vertical; min-height: 110px; }
   display: none;
   margin-top: 1rem;
   text-align: center;
-  color: #5c3320;
+  color: #6B8F6B;
   font-weight: 700;
 }
 
@@ -458,15 +451,14 @@ textarea { resize: vertical; min-height: 110px; }
    FOOTER
 ════════════════════════════════════ */
 footer {
-  background-color: #2c1810;
-  background-color: var(--dark-roast);
-  color: rgba(232,201,154,0.5);
+  background-color: #1A2A1A;
+  color: rgba(184,212,184,0.6);
   text-align: center;
   padding: 2.5rem 1rem;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
 }
-footer strong { color: #c8955a; color: var(--crema); }
+footer strong { color: #C4956A; }
 
 /* ════════════════════════════════════
    ANIMATIONS
@@ -539,28 +531,112 @@ footer strong { color: #c8955a; color: var(--crema); }
     <h2 class="section-title">Choose your cart</h2>
     <div class="carts-grid">
       <div class="cart-card">
-        <div class="cart-card-icon">&#9749;</div>
-        <h3>The Classic Cart</h3>
-        <p>Our signature timber-and-brass cart. Perfect for up to 150 guests. Serves espresso, lattes, flat whites, and more.</p>
-        <span class="cart-tag">Up to 150 guests</span>
+        <!-- <div class="cart-card-icon">&#9749;</div> -->
+        <h3>The Express Cart</h3>
+        <p>
+            * La Marzocco GS3 Machine & Equipment Hire <br>
+            * Professional Barrista <br>
+            * Full Coffee Menu <br>
+            * Setup/2 Hour Service/Pack Up <br>
+            * Add Your Logo <br>
+        </p>
+        <span class="cart-tag">Up to 80 Cups</span>
+        <span class="cart-tag">From $600 + GST</span>
+        <span class="cart-tag">Best For Meetings and Small Events</span>
       </div>
       <div class="cart-card">
-        <div class="cart-card-icon">&#128656;</div>
-        <h3>The Vintage Van</h3>
-        <p>A restored 1972 split-screen camper with a full two-group setup. An absolute showstopper at weddings and large outdoor events.</p>
-        <span class="cart-tag">150&ndash;400 guests</span>
+        <!-- <div class="cart-card-icon">&#128656;</div> -->
+        <h3>The Starndard Cart</h3>
+        <p>
+            * La Marzocco GS3 Machine & Equipment Hire <br>
+            * Professional Barrista <br>
+            * Full Coffee Menu <br>
+            * Setup/Service/Pack Up <br>
+            * Add Your Logo <br>
+        </p>
+        <span class="cart-tag">Upto 130 Cups</span>
+        <span class="cart-tag">From $900 + GST</span>
+        <span class="cart-tag">Best For Community Open Days</span>
+        <!-- <span class="cart-tag">150&ndash;400 guests</span> -->
       </div>
       <div class="cart-card">
-        <div class="cart-card-icon">&#127963;</div>
-        <h3>The Espresso Bar</h3>
-        <p>Sleek, modern bar setup for corporate events and conference spaces. Discreet, efficient, and endlessly photogenic.</p>
-        <span class="cart-tag">Corporate &amp; Indoors</span>
+        <!-- <div class="cart-card-icon">&#127963;</div> -->
+        <h3>The Unlimited Cart</h3>
+        <p>
+            * La Marzocco GS3 Machine & Equipment Hire <br>
+            * Professional Barrista <br>
+            * Full Coffee Menu <br>
+            * Setup/Service/Pack Up <br>
+            * Add Your Logo <br>
+        </p>
+        <span class="cart-tag">Unlimited Cups</span>
+        <span class="cart-tag">From $1200 + GST</span>
+        <span class="cart-tag">Best For Conferences, Expos, Product Launch</span>
       </div>
-      <div class="cart-card">
+      <!-- <div class="cart-card">
         <div class="cart-card-icon">&#127861;</div>
         <h3>Cold Brew Station</h3>
         <p>For summer events &mdash; cold brew on tap, iced lattes, frappes, and flavoured milk. A crowd favourite when the sun&rsquo;s out.</p>
         <span class="cart-tag">Seasonal &middot; Outdoors</span>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- Catering -->
+
+<section class="carts" id="carts">
+  <div class="container">
+    <span class="section-label">Got A Group To Feed?</span>
+    <h2 class="section-title">We do Catering! </h2>
+    <div class="carts-grid">
+      <div class="cart-card">
+        <h3>Family Events & Gatherings</h3>
+        <p>
+            * Sandwich Box <br>
+            * Rolls or Wrap Box <br>
+            * Grazing Box <br>
+            * Fruit Box <br>
+            * Salad Box <br>
+            * Hot Platter <br>
+            * Sweets & Pastry Box <br>
+        </p>
+      </div>
+      <div class="cart-card">
+        <h3>Birthday Parties</h3>
+        <p>
+            * Sandwich Box <br>
+            * Rolls or Wrap Box <br>
+            * Grazing Box <br>
+            * Fruit Box <br>
+            * Salad Box <br>
+            * Hot Platter <br>
+            * Sweets & Pastry Box <br>
+        </p>
+      </div>
+      <div class="cart-card">
+        <h3>Staff Meetings</h3>
+        <p>
+            * Sandwich Box <br>
+            * Rolls or Wrap Box <br>
+            * Grazing Box <br>
+            * Fruit Box <br>
+            * Salad Box <br>
+            * Hot Platter <br>
+            * Sweets & Pastry Box <br>
+        </p>
+      </div>
+      <div class="cart-card">
+        <h3>Corporate Functions</h3>
+        <p>
+            * Sandwich Box <br>
+            * Rolls or Wrap Box <br>
+            * Grazing Box <br>
+            * Fruit Box <br>
+            * Salad Box <br>
+            * Hot Platter <br>
+            * Sweets & Pastry Box <br>
+        </p>
       </div>
     </div>
   </div>
@@ -646,10 +722,10 @@ footer strong { color: #c8955a; color: var(--crema); }
             <label for="cart">Preferred Cart / Package</label>
             <select id="cart">
               <option value="">Not sure yet</option>
-              <option>The Classic Cart</option>
-              <option>The Vintage Van</option>
-              <option>The Espresso Bar</option>
-              <option>Cold Brew Station</option>
+              <option>The Express Cart</option>
+              <option>The Starndard Cart</option>
+              <option>The Unlimited Cart</option>
+              <!-- <option>Cold Brew Station</option> -->
             </select>
           </div>
           <div class="form-group">
